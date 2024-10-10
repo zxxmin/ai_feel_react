@@ -1,0 +1,43 @@
+.login-input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 4rem;
+}
+
+.login-input-wrap > input,
+.login-input-wrap > .input-block > input {
+    width: 100%;
+}
+
+.login-input-wrap > input.error:focus,
+.login-input-wrap > .input-block > input.error:focus {
+    outline: .1rem solid var(--color-red) !important;
+}
+
+.login-input-wrap > .input-block > input {
+    padding-right: 4rem !important;
+}
+
+.input-block > label > span {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: inline-block;
+    font-size: 0;
+    background-image: url('../assets/hide_pwd.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.input-block > label > input {
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    margin: -0.1rem;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.input-block > label > input:checked ~ span {
+    background-image: url('../assets/show_pwd.svg');
+}
