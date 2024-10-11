@@ -1,0 +1,134 @@
+.header {
+    height: var(--header-height);
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4em;
+}
+
+.header > h1 {
+    width: 10.4rem;
+    height: 4.8rem;
+    overflow: hidden;
+}
+
+.header > h1 > a::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header > div {
+    position: relative;
+}
+
+.header > div > input {
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    margin: -0.1rem;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.header > div > label {
+    display: flex;
+    flex-direction: row;
+    gap: .8rem;
+    align-items: center;
+    width: 26.4rem;
+    background-color: var(--main-bg);
+    padding: .6rem 4rem .6rem .8rem;
+    border-radius: 10rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.header > div > label::after {
+    content: '';
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    background-image: url('../assets/dropdown.svg');
+    background-repeat: no-repeat;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+}
+
+.header > div > label > span {
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: 0;
+    background-image: url('../assets/profile.svg');
+    background-repeat: no-repeat;
+}
+
+.header > div > label > p {
+    flex: 1;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    width:100%;
+    overflow:hidden;
+}
+
+.header > div > ul {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: var(--color-white);
+    border: .1rem solid var(--border);
+    padding: .8rem 1.6rem;
+    border-radius: .8rem;
+}
+
+.header > div > input:checked ~ ul {
+    display: block;
+}
+
+.header > div > ul > li > button {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    width: 100%;
+    padding: .8rem .4rem;
+    text-align: left;
+}
+
+.header > div > ul > li:nth-child(1) {
+    padding: .8rem .4rem;
+    border-bottom: .1rem solid var(--border);
+}
+
+.header > div > ul > li:nth-child(2) > button::before,
+.header > div > ul > li:nth-child(3) > button::before,
+.header > div > ul > li:nth-child(4) > button::before {
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url('../assets/user_edit.svg');
+}
+
+.header > div > ul > li:nth-child(3) > button::before {
+    background-image: url('../assets/change_pwd.svg');
+}
+
+.header > div > ul > li:nth-child(4) > button {
+    color: var(--color-red);
+}
+
+.header > div > ul > li:nth-child(4) > button::before {
+    background-image: url('../assets/info.svg');
+    filter: invert(53%) sepia(76%) saturate(3590%) hue-rotate(328deg) brightness(96%) contrast(105%);
+}

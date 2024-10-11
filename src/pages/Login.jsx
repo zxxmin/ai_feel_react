@@ -24,7 +24,7 @@ const LoginPage = () => {
         } else {
             setLoginText('계정으로 이동하겠습니다.')
             setErrorMsg(false);
-            nav('/')
+            nav('/emo')
         }
     }
 

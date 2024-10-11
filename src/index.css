@@ -19,6 +19,8 @@
     --bg-happy : #FFEAB3;
     --bg-content : #A5E3E7;
     --border : #CDCDCD;
+
+    --header-height: 10rem;
 }
 
 * {
