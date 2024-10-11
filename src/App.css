@@ -3,3 +3,64 @@
     flex-direction: row;
     height: calc(100vh - var(--header-height));
 }
+
+.content > div {
+    flex: 1;
+    padding: 4rem;
+}
+
+.tit-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.tit-area > h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+/*table*/
+.table-wrap {
+    border-radius: 1.2rem 1.2rem 0 0;
+    overflow: hidden;
+}
+
+table > thead th {
+    background-color: var(--bg-blue);
+    color: var(--color-blue);
+    padding: 1.8rem 1rem;
+    border-right: .1rem solid var(--color-white);
+}
+
+table > thead th.emo-content {
+    background-color: var(--bg-content);
+    color: var(--color-content)
+}
+table > thead th.emo-happy {
+    background-color: var(--bg-happy);
+    color: var(--color-happy)
+}
+table > thead th.emo-sorrow {
+    background-color: var(--bg-sorrow);
+    color: var(--color-sorrow)
+}
+table > thead th.emo-anger {
+    background-color: var(--bg-anger);
+    color: var(--color-anger)
+}
+
+table > thead th:last-child {
+    border-right: none;
+}
+
+table > tbody {
+    background-color: var(--color-white);
+}
+
+table > tbody td {
+    padding: 1.6rem 1rem;
+    border-bottom: .1rem solid #EDEDED;
+}

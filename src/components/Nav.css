@@ -23,7 +23,9 @@
 
 .nav > ul > li > label,
 .nav ul li a {
-    display: block;
+    display: flex;
+    gap: .8rem;
+    align-items: center;
     padding: 1.8rem 0;
     font-size: 1.8rem;
     color: var(--color-white);
@@ -47,4 +49,59 @@
 
 .nav > ul > li > a.is-current ~ ul {
     display: block;
+}
+
+.nav ul li a::before {
+    content: '';
+    width: 2.4rem;
+    height: 2.4rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav ul li a.emo::before {
+    background-image: url('../assets/gnb/emo.svg');
+}
+.nav ul li a.is-current.emo::before {
+    background-image: url('../assets/gnb/emo_on.svg');
+}
+.nav ul li a.stu::before {
+    background-image: url('../assets/gnb/stu.svg');
+}
+.nav ul li a.is-current.stu::before {
+    background-image: url('../assets/gnb/stu_on.svg');
+}
+.nav ul li a.int::before {
+    background-image: url('../assets/gnb/int.svg');
+}
+.nav ul li a.is-current.int::before {
+    background-image: url('../assets/gnb/int_on.svg');
+}
+.nav ul li a.hmt::before {
+    background-image: url('../assets/gnb/hmt.svg');
+}
+.nav ul li a.is-current.hmt::before {
+    background-image: url('../assets/gnb/hmt_on.svg');
+}
+.nav ul li a.tea::before {
+    background-image: url('../assets/gnb/tea.svg');
+}
+.nav ul li a.is-current.tea::before {
+    background-image: url('../assets/gnb/tea_on.svg');
+}
+.nav ul li a.set::before {
+    background-image: url('../assets/gnb/set.svg');
+}
+.nav ul li a.grd::before {
+    background-image: url('../assets/gnb/grd.svg');
+}
+.nav ul li a.is-current.grd::before {
+    background-image: url('../assets/gnb/grd_on.svg');
+}
+.nav ul li a.cls::before {
+    background-image: url('../assets/gnb/cls.svg');
+}
+.nav ul li a.is-current.cls::before {
+    background-image: url('../assets/gnb/cls_on.svg');
 }

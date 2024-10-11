@@ -1,7 +1,7 @@
 import {Route, Routes} from 'react-router-dom';
 import './App.css'
 import LoginPage from './pages/Login'
-import EmotionPage from './pages/emotion'
+import EmotionPage from './pages/Emotion';
 import StudentPage from './pages/Student'
 import InterestStudentPage from './pages/InterestStudent'
 import HomeTeaPage from './pages/HomeTea'
@@ -17,11 +17,11 @@ function App() {
           <Route element={<DashboardLayout />}>
             <Route path="/emo" element={<EmotionPage />} />
             <Route path="/stu" element={<StudentPage />} />
-              <Route path="/int" element={<InterestStudentPage />} />
-              <Route path="/hmt" element={<HomeTeaPage />} />
-              <Route path="/tea" element={<TeacherPage />} />
-              <Route path="/setting/grd" element={<GradePage />} />
-              <Route path="/setting/cls" element={<ClassPage />} />
+            <Route path="/int" element={<InterestStudentPage />} />
+            <Route path="/hmt" element={<HomeTeaPage />} />
+            <Route path="/tea" element={<TeacherPage />} />
+            <Route path="/setting/grd" element={<GradePage />} />
+            <Route path="/setting/cls" element={<ClassPage />} />
           </Route>
           <Route path="/" element={<LoginPage />} />
       </Routes>

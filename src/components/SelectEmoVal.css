@@ -1,0 +1,25 @@
+.date-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    background-color: var(--color-white);
+    padding: 2rem 2.8rem;
+    border-radius: 1.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.date-wrap > div {
+    width: calc((100% / 4) - 1.2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.ant-select,
+.ant-picker {
+    height: 4.8rem;
+}
+
+.ant-picker > .ant-picker-input > input {
+    border: 0 !important;
+}

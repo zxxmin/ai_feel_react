@@ -1,0 +1,57 @@
+.tabs > ul {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10rem;
+    overflow: hidden;
+    background-color: var(--color-white);
+}
+
+.tabs > ul > li > button {
+    padding: 1rem 1.6rem;
+    position: relative;
+}
+
+.tabs > ul > li > button.is-current::after {
+    content: '';
+    background-color: var(--color-blue);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10rem;
+}
+
+.tabs > ul > li > button.is-current > span {
+    z-index: 1;
+    position: relative;
+    color: var(--color-white);
+}
+
+
+/* div.ant-segmented > div.ant-segmented-group {
+    border-radius: 10rem !important;
+    overflow: hidden;
+}
+
+div.ant-segmented > div.ant-segmented-group > label {
+    padding: 1rem 1.6rem;
+}
+
+.ant-segmented-item-selected {
+    background-color: var(--color-blue) !important;
+    box-shadow: none !important;
+    color: var(--color-white) !important;
+    border-radius: 10rem !important;
+}
+
+.ant-segmented-thumb {
+    background-color: var(--color-blue) !important;
+    border-radius: 10rem !important;
+}
+
+.ant-segmented-item-label {
+    padding: 0 !important;
+    min-height: 0 !important;
+    line-height: 1 !important;
+} */

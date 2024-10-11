@@ -1,10 +1,10 @@
-import Header from "../components/Header";
-import Nav from "../components/Nav";
-
 const TeacherPage = () => {
     return (
         <>
-            교사 페이지
+            <div className="tit-area">
+                <h1>비담임교사</h1>
+            </div>
+            비담임교사 페이지
         </>
     )
 }
