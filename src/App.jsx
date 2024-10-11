@@ -20,8 +20,8 @@ function App() {
               <Route path="/int" element={<InterestStudentPage />} />
               <Route path="/hmt" element={<HomeTeaPage />} />
               <Route path="/tea" element={<TeacherPage />} />
-              <Route path="/grd" element={<GradePage />} />
-              <Route path="/cls" element={<ClassPage />} />
+              <Route path="/setting/grd" element={<GradePage />} />
+              <Route path="/setting/cls" element={<ClassPage />} />
           </Route>
           <Route path="/" element={<LoginPage />} />
       </Routes>
