@@ -1,7 +1,7 @@
 import {Route, Routes} from 'react-router-dom';
 import './App.css'
 import LoginPage from './pages/Login'
-import EmotionPage from './pages/emotion.jsx';
+import EmotionPage from './pages/Emotion';
 import StudentPage from './pages/Student'
 import InterestStudentPage from './pages/InterestStudent'
 import HomeTeaPage from './pages/HomeTea'
