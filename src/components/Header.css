@@ -49,11 +49,9 @@
     position: relative;
     cursor: pointer;
     transition: box-shadow .3s;
-    outline: none;
 }
 
 .header > div > label:hover,
-.header > div > input:focus + label,
 .header > div > input:checked + label {
     box-shadow: 0 0 0 .1rem var(--color-blue);
 }
