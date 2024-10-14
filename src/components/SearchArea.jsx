@@ -30,13 +30,13 @@ const SearchArea = ({ btnType }) => {
 
     }
 
-    const { text, icon } = btnData(btnType);
+    const { text, icon, placeholder } = btnData(btnType);
 
     return (
         <fieldset className="search-area">
             <legend>검색</legend>
             <div className="search">
-                <input type="text" placeholder="검색 (이름, 번호)" title="검색어 입력" />
+                <input type="text" placeholder={placeholder} title="검색어 입력" />
                 <button className="search-btn">검색</button>
             </div>
             <div className="search-option">
