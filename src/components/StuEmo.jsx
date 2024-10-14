@@ -1,10 +1,20 @@
+import { useRecoilValue } from "recoil";
+import Button from "./Button";
+import Pagenation from "./Pagenation";
 import SelectEmoVal from "./SelectEmoVal";
 
+import './StuEmo.css'
+import { studentState } from "../recoilState";
+
 const StuEmo = () => {
+    const students = useRecoilValue(studentState)
+    const studentsCount = students.length
+
+    
     return (
         <div>
             <SelectEmoVal pageType='emo' />
-            <div>
+            <div className="stuemo-wrap">
                 <div className='table-wrap'>
                     <table>
                         <thead>
@@ -18,88 +28,31 @@ const StuEmo = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>2470114</td>
-                                <td>김희진</td>
-                                <td>5</td>
-                                <td>0</td>
-                                <td>4.3</td>
-                                <td>4.7</td>
-                            </tr>
-                            <tr>
-                                <td>2470104</td>
-                                <td>노나현</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>5</td>
-                                <td>2.3</td>
-                            </tr>
-                            <tr>
-                                <td>2470109</td>
-                                <td>이해리</td>
-                                <td>5</td>
-                                <td>0</td>
-                                <td>5</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>2470105</td>
-                                <td>노혜림</td>
-                                <td>0</td>
-                                <td>5</td>
-                                <td>4.3</td>
-                                <td>4.3</td>
-                            </tr>
-                            <tr>
-                                <td>2470102</td>
-                                <td>김태리</td>
-                                <td>1</td>
-                                <td>4</td>
-                                <td>2.5</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>2470101</td>
-                                <td>곽하랑</td>
-                                <td>2.7</td>
-                                <td>2.5</td>
-                                <td>0</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>2470111</td>
-                                <td>채시은</td>
-                                <td>0</td>
-                                <td>5</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>2470114</td>
-                                <td>김희진</td>
-                                <td>2</td>
-                                <td>3.8</td>
-                                <td>3.5</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>2470113</td>
-                                <td>김희연</td>
-                                <td>0</td>
-                                <td>1.4</td>
-                                <td>1</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>2470112</td>
-                                <td>남유주</td>
-                                <td>0</td>
-                                <td>4.3</td>
-                                <td>3</td>
-                                <td>0</td>
-                            </tr>
+                            {students.map((stu) => (
+                                <tr key={`학생별평균정서-${stu.id}`}>
+                                    <td>{stu.email}</td>
+                                    <td>{stu.name}</td>
+                                    <td>{stu.content}</td>
+                                    <td>{stu.happy}</td>
+                                    <td>{stu.sorrow}</td>
+                                    <td>{stu.anger}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
+                </div>
+
+                <Pagenation total={studentsCount} />
+
+                <div className="report-btn-wrap">
+                    <Button
+                        text={'보고서 출력 (PDF)'}
+                        icon={'pdf'}
+                    />
+                    <Button
+                        text={'보고서 출력 (Excel)'}
+                        icon={'excel'}
+                    />
                 </div>
             </div>
         </div>

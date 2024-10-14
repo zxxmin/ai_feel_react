@@ -1,7 +1,12 @@
-import './SchoolTime.css'
+import { useRecoilValue } from 'recoil';
+import Pagenation from './Pagenation';
 import SelectEmoVal from './SelectEmoVal';
+import { studentState } from '../recoilState';
 
 const SchoolTime = () => {
+    const students = useRecoilValue(studentState)
+    const studentsCount = students.length
+
     return (
         <div>
             <SelectEmoVal pageType='emo' />
@@ -21,109 +26,23 @@ const SchoolTime = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2470114</td>
-                                <td>김희진</td>
-                                <td>2024-10-01</td>
-                                <td>13:36:31</td>
-                                <td>4</td>
-                                <td>오전</td>
-                                <td>행복</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>2470104</td>
-                                <td>노나현</td>
-                                <td>2024-10-02</td>
-                                <td>08:49:29</td>
-                                <td>5</td>
-                                <td>오전</td>
-                                <td>행복</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>2470109</td>
-                                <td>이해리</td>
-                                <td>2024-10-02</td>
-                                <td>08:50:17</td>
-                                <td>1</td>
-                                <td>오전</td>
-                                <td>행복</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>2470105</td>
-                                <td>노혜림</td>
-                                <td>2024-10-02</td>
-                                <td>08:51:37</td>
-                                <td>3</td>
-                                <td>오전</td>
-                                <td>슬픔</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>2470102</td>
-                                <td>김태리</td>
-                                <td>2024-10-02</td>
-                                <td>08:52:39</td>
-                                <td>1</td>
-                                <td>오전</td>
-                                <td>분노</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>2470101</td>
-                                <td>곽하랑</td>
-                                <td>2024-10-02</td>
-                                <td>09:02:12</td>
-                                <td>5</td>
-                                <td>오전</td>
-                                <td>분노</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>2470111</td>
-                                <td>채시은</td>
-                                <td>2024-10-02</td>
-                                <td>09:05:29</td>
-                                <td>1</td>
-                                <td>오전</td>
-                                <td>행복</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>2470114</td>
-                                <td>김희진</td>
-                                <td>2024-10-02</td>
-                                <td>09:20:07</td>
-                                <td>1</td>
-                                <td>오전</td>
-                                <td>만족</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>2470113</td>
-                                <td>김희연</td>
-                                <td>2024-10-02</td>
-                                <td>09:21:13</td>
-                                <td>3</td>
-                                <td>오전</td>
-                                <td>행복</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>2470112</td>
-                                <td>남유주</td>
-                                <td>2024-10-02</td>
-                                <td>09:22:30</td>
-                                <td>1</td>
-                                <td>오전</td>
-                                <td>행복</td>
-                            </tr>
+                            {students.map((stu) => (
+                                <tr key={`등하교시간-${stu.id}`}>
+                                    <td>{stu.id}</td>
+                                    <td>{stu.email}</td>
+                                    <td>{stu.name}</td>
+                                    <td>{stu.date}</td>
+                                    <td>{stu.schlTime}</td>
+                                    <td>{stu.level}</td>
+                                    <td>오전</td>
+                                    <td>{stu.emoType}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>
+
+                <Pagenation total={studentsCount} />
             </div>
         </div>
     )

@@ -1,0 +1,12 @@
+.stuemo-wrap {
+    position: relative;
+}
+
+.report-btn-wrap {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    position: absolute;
+    bottom: -2.4rem;
+    right: 0;
+}

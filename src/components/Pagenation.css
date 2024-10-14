@@ -1,0 +1,22 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .8rem;
+}
+
+.pagination > li > a {
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    color: var(--color-black);
+    padding: 1rem;
+}
+
+.pagination > li.active > a {
+    color: var(--color-blue);
+    font-weight: 700;
+}
+
+.pagination > li.disabled > a {
+    color: #B1B1B1;
+}

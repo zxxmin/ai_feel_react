@@ -11,7 +11,7 @@ const Tab = ({ onClickTab, selectedTab }) => {
     ];
 
     return (
-        <div className="tabs">
+        <div className="tabs" id="tabs">
             <Segmented
                 options={tabsData.map(tab => ({
                     label: tab.label,

@@ -1,5 +1,5 @@
 .nav {
-    width: 26rem;
+    width: var(--nav-width);
     height: 100%;
     background-color: var(--color-blue);
     background-image: url('/nav_bg.svg');

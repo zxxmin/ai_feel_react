@@ -28,30 +28,38 @@
     color: var(--color-white);
 }
 
+#tabs > .ant-segmented {
+    color: #666666;
+}
 
-/* div.ant-segmented > div.ant-segmented-group {
-    border-radius: 10rem !important;
+#tabs > .ant-segmented > .ant-segmented-group {
+    background: var(--color-white);
+    border-radius: 10rem;
     overflow: hidden;
 }
 
-div.ant-segmented > div.ant-segmented-group > label {
+#tabs > .ant-segmented > .ant-segmented-group > .ant-segmented-item-selected {
+    background-color: var(--color-blue);
+    border-radius: 10rem;
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+#tabs > .ant-segmented > .ant-segmented-group > .ant-segmented-item:hover:not(.ant-segmented-item-selected) {
+    color: #666666;
+}
+
+#tabs > .ant-segmented > .ant-segmented-group > .ant-segmented-item:hover::after {
+    background: none;
+}
+
+#tabs > .ant-segmented > .ant-segmented-group > .ant-segmented-item > .ant-segmented-item-label {
+    line-height: 1.2;
     padding: 1rem 1.6rem;
 }
 
-.ant-segmented-item-selected {
-    background-color: var(--color-blue) !important;
-    box-shadow: none !important;
-    color: var(--color-white) !important;
-    border-radius: 10rem !important;
+#tabs > .ant-segmented > .ant-segmented-group .ant-segmented-thumb {
+    background-color: var(--color-blue);
+    border-radius: 10rem;
 }
 
-.ant-segmented-thumb {
-    background-color: var(--color-blue) !important;
-    border-radius: 10rem !important;
-}
-
-.ant-segmented-item-label {
-    padding: 0 !important;
-    min-height: 0 !important;
-    line-height: 1 !important;
-} */
