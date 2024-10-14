@@ -26,19 +26,21 @@ const ClassPage = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <td>한아름</td>
-                            <td>
-                                <div className="btn-wrap">
-                                    {btnData.map((btn) => (
-                                        <Button
-                                            key={btn.icon}
-                                            iconOnly={true}
-                                            text={btn.text}
-                                            icon={btn.icon}
-                                        />
-                                    ))}
-                                </div>
-                            </td>
+                            <tr>
+                                <td>한아름</td>
+                                <td>
+                                    <div className="btn-wrap">
+                                        {btnData.map((btn) => (
+                                            <Button
+                                                key={btn.icon}
+                                                iconOnly={true}
+                                                text={btn.text}
+                                                icon={btn.icon}
+                                            />
+                                        ))}
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
